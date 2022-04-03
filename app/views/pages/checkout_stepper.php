@@ -27,10 +27,10 @@
         </div>
         <div class="nav-btn">
             <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
         <!-- end burger menu -->
 
@@ -60,7 +60,7 @@
                 <li class="list national-icon ">
                     <a href="#yemen " target="_self "><img src="../assests/img/logos/ye.svg " alt="Avatar "> YER اليمن</a>
                 </li>
-                <li class=" list english "><a href="#translate " target="_self ">English   <img src="../assests/img/logos/translate.svg " alt="Avatar "></a></li>
+                <li class=" list english "><a href="#translate " target="_self ">English <img src="../assests/img/logos/translate.svg " alt="Avatar "></a></li>
             </ul>
 
 
@@ -88,10 +88,10 @@
             <div class="changeDir">
                 <button type="button" onclick="document.getElementById('body').style.direction= 'ltr'">
                     left to right
-                    </button>
+                </button>
                 <button type="button" onclick="document.getElementById('body').style.direction = 'rtl'">
                     right to left
-                    </button>
+                </button>
             </div>
         </section>
     </header>
@@ -247,120 +247,6 @@
         </form>
 
     </section>
-    <!-- start footer  -->
-    <section class="foot ">
-        <div class="foo ">
-            <div class="foo1 ">
-                <h2>انظم الى نشرتنا البريدية</h2>
-                <div class="send ">
-                    <input type="email " name="email " placeholder="ادخل بريدك الإلكتروني ">
-                    <svg class="email-icon " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 24 24 " width="24 " height="24 ">
-                                        <path fill="none " d="M0 0h24v24H0z " />
-                                        <path
-                                            d="M18 8h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V7a6 6 0 1 1 12 0v1zm-7 7.732V18h2v-2.268a2 2 0 1 0-2 0zM16 8V7a4 4 0 1 0-8 0v1h8z " />
-                                    </svg>
-                    <button type="submit " name="submit "> اشتراك</button>
-
-                </div>
-                <br><br>
-
-            </div>
-            <div class="foo1 ">
-                <h2>خدمة العملاء</h2>
-                <ul>
-                    <li>مبيعات الشركة</li>
-                    <li>الاسئلة المتكرر</li>
-                    <li>دليل التسوق والمطبوعات</li>
-                    <li>مواقع المعارض</li>
-                    <li>سياسة الضمان</li>
-                    <li> سياسة الإسترجاع والللإستبدال </li>
-                    <li>تواصل بنا </li>>
-                    <p>77777777777777</p>
-                </ul>
-            </div>
-
-            <div class="foo1 ">
-                <h2>خدمات جرير</h2>
-                <ul>
-                    <li>مبيعات الشركة</li>
-                    <li>الاسئلة المتكرر</li>
-                    <li>دليل التسوق والمطبوعات</li>
-                    <li>مواقع المعارض</li>
-                    <li>سياسة الضمان</li>
-                    <li> سياسة الإسترجاع والللإستبدال </li>
-
-                </ul>
-            </div>
-            <div class="foo1 ">
-
-                <h2>روابط سريعة</h2>
-                <ul>
-                    <li>مبيعات الشركة</li>
-                    <li>الاسئلة المتكرر</li>
-                    <li>دليل التسوق والمطبوعات</li>
-                    <li>مواقع المعارض</li>
-
-
-                </ul>
-
-            </div>
-            <div class="foo1 ">
-
-                <h2>عن جرير</h2>
-                <ul>
-                    <li>مبيعات الشركة</li>
-                    <li>الاسئلة المتكرر</li>
-                    <li>دليل التسوق والمطبوعات</li>
-                    <li>مواقع المعارض</li>
-                    <li>سياسة الضمان</li>
-                    <li> سياسة الإسترجاع والللإستبدال </li>
-                    <li>تواصل بنا </li>
-
-                </ul>
-
-            </div>
-        </div>
-        <div class="sociality ">
-            <h2>تواصل معنا </h2>
-            <div class="social ">
-                <img src="../assests/img/logos/facbook.svg " alt="Avatar ">
-                <img src="../assests/img/logos/twiter.svg " alt="Avatar ">
-                <img src="../assests/img/logos/youtup.svg " alt="Avatar ">
-                <img src="../assests/img/logos/instagram.svg " alt="Avatar ">
-                <img src="../assests/img/logos/linkedIn.svg " alt="Avatar ">
-                <img src="../assests/img/logos/snapshat.svg " alt="Avatar ">
-                <img src="../assests/img/logos/tiktok.svg " alt="Avatar ">
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="copy-right ">
-            <a href="">شروط الخدمة</a> <a href="">|  سياسة الخصوصية</a>
-            <p>
-                .جميع الحقوق محفوظة لمكتبة جرير © 2015. س.ت. 1010032264.
-            </p>
-        </div>
-        <div class="visaCard ">
-            <a>
-                <img src="../assests/img/logos/american-ex.svg " alt="Avatar "></a>
-            <a>
-                <img src="../assests/img/logos/master.svg " alt="Avatar "></a>
-            <a>
-                <img src="../assests/img/logos/visa.svg " alt="Avatar "></a>
-            <a>
-                <img src="../assests/img/logos/mada.svg " alt="Avatar ">
-            </a>
-            <a>
-                <img src="../assests/img/logos/qitaf.svg " alt="Avatar ">
-            </a>
-            <a>
-                <img src="../assests/img/logos/payinShop.svg " alt="Avatar ">
-            </a>
-
-
-        </div>
-    </footer>
-    <!-- login &creatAcount models -->
 
     <section>
         <div class="login-modal-container " id="login-modal-container ">
@@ -401,17 +287,17 @@
                         <div class="signin-row-container ">
                             <input type="number " class="signin-phonenumber " type="number " placeholder="رقم الجوال ">
                             <select class="signin-countrycode ">
-                                        <option value=" ">
-                                           
-                                        رمز البلد
+                                <option value=" ">
 
-                                        </option>
+                                    رمز البلد
 
-                                        <option>
-                                            +967
-                                        </option>
+                                </option>
 
-                                    </select>
+                                <option>
+                                    +967
+                                </option>
+
+                            </select>
                         </div>
 
                         <span style="margin-right: 5px; ">سوف نرسل لك <span style="font-weight: 600; ">رمز التحقق عن طريق رسالة نصية</span></span>
@@ -437,19 +323,19 @@
                         </div>
 
                         <label class="signin-checkbox-container ">
-                                            <span class="signin-agree ">أوافق على  </span><a href=" ">الشروط والأحكام</a>
-                                            <input type="checkbox ">
-                                      
-                                            <br>
-                                            <span class="signin-checkmark "></span>
-                                          </label>
+                            <span class="signin-agree ">أوافق على </span><a href=" ">الشروط والأحكام</a>
+                            <input type="checkbox ">
+
+                            <br>
+                            <span class="signin-checkmark "></span>
+                        </label>
 
                         <label class="signin-checkbox-container ">
-                                            <span class="signin-register-news ">التسجيل للانظمام للنشرة البريدية</span>
-                                            <input type="checkbox ">
-                                          
-                                            <span class="signin-checkmark "></span>
-                                          </label>
+                            <span class="signin-register-news ">التسجيل للانظمام للنشرة البريدية</span>
+                            <input type="checkbox ">
+
+                            <span class="signin-checkmark "></span>
+                        </label>
 
 
 
@@ -465,86 +351,89 @@
         </div>
 
     </section>
-</body>
-
-<!-- js -->
-<script>
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
-
-    function showTab(n) {
-        // This function will display the specified tab of the form ...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
-        // ... and fix the Previous/Next buttons:
-        if (n == 0) {
-            document.getElementById("prevBtn").style.display = "none";
-        } else {
-            document.getElementById("prevBtn").style.display = "inline";
-        }
-        if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "موافق";
-
-        } else {
-
-            document.getElementById("nextBtn").innerHTML = "التالي";
 
 
-        }
-        // ... and run a function that displays the correct step indicator:
-        fixStepIndicator(n)
-    }
+    <!-- js -->
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
 
-    function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form... :
-        if (currentTab >= x.length) {
-            //...the form gets submitted:
-            document.getElementsById("regForm").submit();
-            return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-    }
-
-    function validateForm() {
-        // This function deals with validation of the form fields
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
-        for (i = 0; i < y.length; i++) {
-            // If a field is empty...
-            if (y[i].value == "") {
-                // add an "invalid" class to the field:
-                y[i].className += " invalid";
-                // and set the current valid status to false:
-                valid = false;
+        function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
             }
-        }
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
-        }
-        return valid; // return the valid status
-    }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "موافق";
 
-    function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace("active", "unactive");
-        }
-        //... and adds the "active" class to the current step:
-        x[n].className += " active";
-    }
-</script>
+            } else {
 
-</html>
+                document.getElementById("nextBtn").innerHTML = "التالي";
+
+
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementsById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false:
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace("active", "unactive");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+        }
+    </script>
+
+    <!-- footer -->
+
+    <?php include("footer.php"); ?>
+    <!-- / footer -->
