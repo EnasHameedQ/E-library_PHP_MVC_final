@@ -3,49 +3,59 @@
 namespace coding\app\controllers;
 
 use coding\app\models\Book;
+use coding\app\models\Category;
 
 class BooksController extends Controller{
 
     function view_page($parameters=null){
         $books=new Book();
+        // $allbooks=array();
+        $category=new Category();
         $allbooks=$books->getAll();
+        $allcat=$category->getAll();
+        $data=[$allbooks,$allcat];
 
-        $this->view('main',$allbooks);
+        // print_r($allcat);
+        $this->viewDashboard('main',$data);
 
     }
 
-        function view_details_page($parameters=null){
+        function viewDashboard_details_page($parameters=null){
         $books=new Book();
         $allbooks=$books->getAll();
 
-        $this->view('details',$allbooks);
+        $this->viewDashboard('details',$allbooks);
 
     }
 
     function listAll($parameters=null){
 
-        $parameters['status'];
+        // $parameters['status'];
         $books=new Book();
         $allbooks=$books->getAll();
         //print_r($allbooks);
 
-        $this->view('list_books',$allbooks);
+        $this->viewDashboard('list_books',$allbooks);
 
     }
     function create(){
-        $this->view('add_books');
+        $this->viewDashboard('add_books');
 
     }
 
     function store(){
         print_r($_POST);
-        print_r($_FILES);
+        // print_r($_FILES);
         $books=new Book();
         
-        $books->name=$_POST['books_name'];
+        $books->title=$_POST['title'];
         $imageName=$this->uploadFile($_FILES['image']);
 
         $books->image=$imageName!=null?$imageName:"default.png";
+        $books->description=$_POST['description'];
+        $books->price=$_POST['price'];
+        $books->pages_number=$_POST['pages_number'];
+
         $books->created_by=1;
         $books->is_active=$_POST['is_active'];
 
@@ -56,15 +66,33 @@ class BooksController extends Controller{
 
         $cat=new Book();
         $result=$cat->getSingleRow($params['id']);
-        $this->view('edit_books',$result);
+        $this->viewDashboard('edit_books',$result);
+        print_r($result) ;
         
 
     }
     function update(){
 
+         $books=new Book();
+
+         $books->title=$_POST['title'];
+        $imageName=$this->uploadFile($_FILES['image']);
+
+        $books->image=$imageName!=null?$imageName:"default.png";
+        $books->description=$_POST['description'];
+        $books->price=$_POST['price'];
+        $books->pages_number=$_POST['pages_number'];
+
+        $books->created_by=1;
+        $books->is_active=1;
+
+        $books->update();
     }
+
     public function remove($params=[]){
         echo "remove function";
+        $books=new Book();
+        $books->changeStatus($params['id']);
 
     }
 
@@ -97,5 +125,3 @@ class BooksController extends Controller{
 
 
 }
-
-?>

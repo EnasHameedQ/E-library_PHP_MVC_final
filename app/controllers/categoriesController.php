@@ -6,7 +6,7 @@ use coding\app\models\Category;
 
 class CategoriesController extends Controller{
 
-        function viewDashboard_page($parameters=null){
+        function view_page($parameters=null){
 
         $categories=new Category();
         $allCategories=$categories->getAll();
@@ -65,7 +65,7 @@ class CategoriesController extends Controller{
 
         $category->image=$imageName!=null?$imageName:"default.png";
         $category->created_by=1;
-        $category->is_active=$_POST['is_active'];
+        $category->is_active=1;
 
         $category->update();
         // $this->viewDashboard('list_categories');
