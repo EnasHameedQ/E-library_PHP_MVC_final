@@ -3,23 +3,24 @@ namespace coding\app\system;
 
 use Dotenv\Dotenv;
 
-class AppSystem{
+class AppSystem
+{
     public Request $request;
-
+    public Response $response;
     public Router $router;
     public static AppSystem $appSystem;
-
+    public Database $database;
     
-    function __construct()
+    function __construct(array $dbConfig)
     {
 
         
-    
+   
         self::$appSystem=$this;
         $this->request=new Request();
-
+        $this->response=new Response();
         $this->router=new Router($this->request);
-
+        $this->database = new Database($dbConfig);
     } 
     
     public function start(){

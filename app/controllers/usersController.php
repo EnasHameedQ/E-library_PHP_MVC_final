@@ -1,42 +1,56 @@
 <?php
-
 namespace coding\app\controllers;
 
 use coding\app\models\User;
-use coding\app\system\AppSystem;
 
+class UsersController extends Controller{
 
-class UsersController extends Controller
-{
-    function newUser()
-    {
-        $this->view('new_user');
+    function signup_page(){
+        $this->viewDashboard('signup');
+
+    } 
+     function login_page(){
+        $this->viewDashboard('login');
+
     }
 
-   function view($viewName,$params=[]){
-       AppSystem::$appSystem->router->view($viewName,$params);
-   }
-public function register(){
-$this->view('new_user');
-}
-    public function  show_home(){
-        // examples
-        // first ex
-        //$users=array('ahmed','mohameed','ali');
-         // $this->view('home', $users);
-        // second ex
-        // $users = array(array('name'=>'ahmed','major'=>'web fullstack','social'=> 'https://facebook.com/'),
-        //     array('name' => 'mohameed', 'major' => 'ERP', 'social' => 'https://github.com/'),
-        //     array('name' => 'ali', 'major' => 'Network', 'social' => 'https://github.com/798u8768'));
-
-
-       // $this->view('home', $users);
-
-        // real data from database
-        $users= new User();
-//   $allusers=$users->select()->where()-> orderBy()-> get();//get()  build in builder quiry
-
-        // $this->view('home', $allusers);
+    function newUser(){
+        $this->viewDashboard('new_user');
     }
 
+        public function show(){
+            $this->viewDashboard('list_categories');
+
+    }
+
+    public function saveUser(){
+
+        //print_r($_POST);
+        $user=new User();
+        $user->name=$_POST['name'];
+        $user->email=$_POST['email'];
+        $user->password=md5($_POST['password']);
+        $user->is_active=isset($_POST['is_active'])?1:0;
+        $user->role_id=1;
+        $user->save();
+        if($user->save())
+        
+        $this->viewDashboard('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->viewDashboard('feedback',['danger'=>'can not add data']);
+
+    }
+
+    public function register(){
+        $this->viewDashboard("new_user");
+    }
+
+    public function delete(){
+        
+    }
+
+
+
+
 }
+?>

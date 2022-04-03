@@ -7,8 +7,13 @@ use coding\app\system\Router;
 
 class Controller{
 
-   function view($viewName,$params=[]){
-       AppSystem::$appSystem->router->view($viewName,$params);
+   function viewDashboard($viewName,$params=[]){
+       AppSystem::$appSystem->router->viewDashboard($viewName,$params);
    }
-
+    function viewWeb($viewName, $params = [])
+    {
+        AppSystem::$appSystem->router->viewWeb($viewName, $params);
+    }
+  
 }
+?>

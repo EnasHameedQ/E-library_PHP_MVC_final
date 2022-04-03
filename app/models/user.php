@@ -1,17 +1,21 @@
 <?php
-
 namespace coding\app\models;
-class User 
-{
 
 
-  // function __construct()
-  // {
+
+class User extends Model{
    
-  // }
 
-  // function __set($name, $value)
-  // {
-  //   $this->$name = $value;
-  // }
+    function __construct()
+    {
+        parent::$tblName="users";
+        
+    }
+
+    function __set($name, $value)
+    {
+        $this->$name=$value;
+        
+    }
+
 }
