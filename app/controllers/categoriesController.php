@@ -6,7 +6,7 @@ use coding\app\models\Category;
 
 class CategoriesController extends Controller{
 
-        function view_page($parameters=null){
+        function viewDashboard_page($parameters=null){
 
         $categories=new Category();
         $allCategories=$categories->getAll();
@@ -18,7 +18,7 @@ class CategoriesController extends Controller{
 
     function listAll($parameters=null){
 
-        $parameters['status'];
+        // $parameters['status'];
         $categories=new Category();
         $allCategories=$categories->getAll();
         //print_r($allCategories);
@@ -51,14 +51,34 @@ class CategoriesController extends Controller{
         $cat=new Category();
         $result=$cat->getSingleRow($params['id']);
         $this->viewDashboard('edit_category',$result);
+    
+        
+     print_r($result) ;
         
 
     }
-    function update(){
+    function update($params=[]){
+        $category=new Category();
+
+        $category->name=$_POST['category_name'];
+        $imageName=$this->uploadFile($_FILES['image']);
+
+        $category->image=$imageName!=null?$imageName:"default.png";
+        $category->created_by=1;
+        $category->is_active=$_POST['is_active'];
+
+        $category->update();
+        // $this->viewDashboard('list_categories');
+
+        
 
     }
     public function remove($params=[]){
         echo "remove function";
+        $cat=new Category();
+        $cat->changeStatus($params['id']);
+        // $this->viewDashboard('remove_category',$result);
+       
 
     }
 
@@ -91,5 +111,3 @@ class CategoriesController extends Controller{
 
 
 }
-
-?>

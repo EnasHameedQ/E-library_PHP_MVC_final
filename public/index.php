@@ -14,7 +14,6 @@ use coding\app\controllers\OrderController;
 use coding\app\controllers\StepOneController;
 use coding\app\controllers\StepTwoController;
 use coding\app\controllers\StepThreeController;
-use coding\app\controllers\Controller;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__)); //createImmutable(__DIR__);
@@ -29,7 +28,7 @@ $config = array(
 );
 $system = new AppSystem($config);
 
-/** dashboard routes  */
+/** web routes  */
 
 // login Routes
 Router::get('/login', [UsersController::class, 'login_page']);
@@ -58,7 +57,7 @@ Router::get('/category_page', [CategoriesController::class, 'view_page']);
 Router::get('/categories', [CategoriesController::class, 'listAll']);
 Router::get('/add_category', [CategoriesController::class, 'create']);
 Router::get('/edit_category/{id}', [CategoriesController::class, 'edit']);
-Router::get('/remove_category/{id}/{name}', [CategoriesController::class, 'remove']);
+Router::get('/remove_category/{id}', [CategoriesController::class, 'remove']);
 Router::post('/save_category', [CategoriesController::class, 'store']);
 Router::post('/update_category', [CategoriesController::class, 'update']);
 /** offer routes  */
@@ -80,16 +79,8 @@ Router::get('/remove_books/{id}/{name}', [BooksController::class, 'remove']);
 Router::post('/save_books', [BooksController::class, 'store']);
 Router::post('/update_books', [BooksController::class, 'update']);
 
-/** end of dashboard routes */
-
-/** start of web routes */
-
-
-Router::get('/', [IndexController::class, 'list']);
-Router::get('/book', [IndexController::class, 'book']);
-Router::get('/categories', [IndexController::class, 'categories']);
-Router::get('/cart', [IndexController::class, 'cart']);
-Router::get('/stepper', [IndexController::class, 'stepper']);
-
 /** end of web routes */
+
+
+
 $system->start();
